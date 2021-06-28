@@ -172,7 +172,7 @@
 6. Setup up a local development environment, perform steps from 4 to 6: https://www.telepresence.io/docs/latest/quick-start/qs-node/
 
 # Support materials
+
 https://www.telepresence.io/docs/latest/reference/architecture/
 https://www.telepresence.io/docs/latest/concepts/devloop/
-https://www.telepresence.io/docs/latest/reference/linkerd/
 https://www.telepresence.io/docs/latest/release-notes/
