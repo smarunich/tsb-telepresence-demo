@@ -237,6 +237,9 @@
 # Support materials
 
 https://www.telepresence.io/docs/latest/reference/architecture/
+
 https://www.telepresence.io/docs/latest/concepts/devloop/
+
 https://www.telepresence.io/docs/latest/release-notes/
+
 https://www.telepresence.io/docs/latest/quick-start/qs-node/
