@@ -234,6 +234,14 @@
   curl http://$INGRESS_IP -H"Host: verylargejavaservice.tsb-telepresence-demo.tetrate.io"  | grep color
   <h1 style="color:blue">Welcome to the EdgyCorp WebApp</h1>
   ```
+
+  Stop the session and review site page again, the color will change to green again.
+
+  ```
+  telepresence leave dataprocessingservice
+  curl http://$INGRESS_IP -H"Host: verylargejavaservice.tsb-telepresence-demo.tetrate.io"  | grep color
+  <h1 style="color:green">Welcome to the EdgyCorp WebApp</h1>
+  ```
 # Support materials
 
 https://www.telepresence.io/docs/latest/reference/architecture/
