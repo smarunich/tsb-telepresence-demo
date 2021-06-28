@@ -168,8 +168,20 @@
   curl http://$INGRESS_IP -H"Host: verylargejavaservice.tsb-telepresence-demo.tetrate.io"  | grep color
   <h1 style="color:green">Welcome to the EdgyCorp WebApp</h1>
   ```
-
-6. Setup up a local development environment, perform steps from 4 to 6: https://www.telepresence.io/docs/latest/quick-start/qs-node/
+6. Patch application deployments 
+  ``` 
+  cat <<EOF > patch-telepresence-excludeOutboundPorts.yaml
+  ---
+  spec:
+    template:
+      metadata:
+        annotations:
+          traffic.sidecar.istio.io/excludeOutboundPorts: "8081,8022,6000-7999"
+  EOF
+  kubectl patch deployment dataprocessingservice --type merge --patch "$(cat patch-telepresence-excludeOutboundPorts.yaml)"
+  ```
+  
+7. Setup up a local development environment, perform steps from 4 to 6: https://www.telepresence.io/docs/latest/quick-start/qs-node/
 
 # Support materials
 
